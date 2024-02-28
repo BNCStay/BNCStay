@@ -1,0 +1,21 @@
+{
+  // https://go.microsoft.com/fwlink/?LinkId=733558
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "CPAI: lint",
+      "type": "shell",
+      "command": "pnpm lint"
+    },
+    {
+      "label": "CPAI: format",
+      "type": "shell",
+      "command": "pnpm format"
+    },
+    {
+      "label": "Leah Copilot: development",
+      "type": "shell",
+      "command": "pnpm -F=./apps/leah-copilot dev"
+    }
+  ]
+}
