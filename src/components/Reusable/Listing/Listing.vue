@@ -130,7 +130,8 @@ const showAllPhotos = ref(false)
                         <HeartIcon
                           v-if="liked"
                           width="1em"
-                          height="1em˝"
+                          height="1em"
+                          class="text-[#e81919]"
                         />
 
                         <HeartOutlineIcon v-else />
@@ -284,7 +285,10 @@ const showAllPhotos = ref(false)
           :duration="liked ? 250 : 300"
         >
 
-          <HeartIcon v-if="liked" />
+          <HeartIcon
+            v-if="liked"
+            class="text-[#e81919]"
+          />
 
           <svg
             v-else

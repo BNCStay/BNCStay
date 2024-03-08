@@ -12,7 +12,7 @@ export async function sleep(
   _duration: Duration,
   callback?: () => void
 ): Promise<number> {
-  const duration = (_duration >= 0 ? _duration : 0) as number;
+  const duration = (Number(_duration) >= 0 ? _duration : 0) as number;
 
   if (duration === Infinity) {
     return Promise.reject("Duration must be less than Infinity");
@@ -25,12 +25,12 @@ export async function sleep(
       clearTimeout(timeout);
     }, duration);
 
-    return Promise.resolve(timeout);
+    return Promise.resolve(timeout as unknown as number);
   }
 
   return new Promise((resolve) => {
     const timeout = setTimeout(() => {
-      resolve(timeout);
+      resolve(timeout as unknown as number);
 
       clearTimeout(timeout);
     }, duration);

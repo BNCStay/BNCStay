@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import InputDropdown from '../Reusable/InputDropdown/InputDropdown.vue'
+import RecentIcon from '../UI/Icon/RecentIcon.vue';
+import HeartIcon from '../UI/Icon/HeartIcon.vue';
+import UserIcon from '../UI/Icon/UserIcon.vue';
 
 const items = [
   {
@@ -95,5 +98,29 @@ function toggleIsOpen(id: number) {
         />
       </div>
     </div>
+  </header>
+
+  <header class="lg:hidden fixed z-50 bottom-0 h-16 w-full border-t border-black/15 bg-white">
+    <nav class="h-full">
+      <ul class="h-full grid grid-flow-col grid-cols-[1fr,1fr,1fr] items-center justify-items-center gap-4">
+        <li class="rounded h-10 w-10 grid place-items-center">
+          <a href="#">
+            <RecentIcon />
+          </a>
+        </li>
+
+        <li class="rounded h-10 w-10 grid place-items-center">
+          <a href="#">
+            <HeartIcon />
+          </a>
+        </li>
+
+        <li class="rounded h-10 w-10 grid place-items-center">
+          <a href="#">
+            <UserIcon />
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
 </template>
