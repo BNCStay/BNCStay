@@ -14,7 +14,7 @@ export default defineConfig({
     host: "0.0.0.0",
     port: 3500,
   },
-  base: 'https://bncstay.github.io/BNCStay/',
+  base: 'https://bncstay.github.io/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
